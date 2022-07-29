@@ -34,7 +34,7 @@
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
   color: white;
@@ -43,7 +43,8 @@
 
 .nav-link {
   color: white;
-  text-decoration: none
+  text-decoration: none;
+  margin-right: 50px
 }
 
 .nav-link:hover {

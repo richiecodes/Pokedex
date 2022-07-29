@@ -13,6 +13,9 @@ const Navbar = () => {
         <Link to='/random' className='nav-link'>
           <li>Random Pokemon</li>
         </Link>
+        <Link to='/search' className='nav-link'>
+          <li>Search</li>
+        </Link>
       </ul>
     </nav>
   )

@@ -20,9 +20,9 @@ const Home = () => {
   
   return (
     <div className='all-pokemon-container'>
-      {allPokemon.map((p) => (
+      {allPokemon.length > 0 ? allPokemon.map((p) => (
         <Minicard pokemon={p} />
-      ))}
+      )) : <h1>Unable to connect :(</h1>}
     </div>
   )
 }

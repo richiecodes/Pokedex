@@ -24,8 +24,6 @@
 }
 
 .refresh-icon:hover {
-  width: 75px;
-  height: 75px;
   cursor: pointer
 }
 
@@ -55,10 +53,11 @@
 .pkmn-stats {
   border-top: 3px solid black;
   width: 100%;
-  padding-top: 50px
+  padding-top: 50px;
 }
 
 .stats-table, th, td {
   border: 1px solid rgb(66, 66, 66);
   font-size: 18px;
+  background: rgb(51, 27, 27);
 }

@@ -8,7 +8,13 @@
   border-radius: 50px;
   font-size: 20px;
   text-align: center;
+  outline: none;
+  border: none;
 }
+
+/* .search-wrapper > form > input:focus {
+  outline: none;
+} */
 
 .search-wrapper > form > label {
   font-size: 20px;

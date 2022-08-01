@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Fullcard from '../Pokemon/Fullcard';
 import './random.css'
+import {FiRefreshCcw} from 'react-icons/fi'
 
 const API_URL = 'http://localhost:8080/pokemon/random'
 
@@ -21,6 +22,7 @@ const Random = () => {
   return (
     <div className='random-card-container'>
       <Fullcard pokemon={pokemon} />
+      <FiRefreshCcw className='refresh-icon' onClick={() => {window.location.reload()}} />
     </div>
   )
 }

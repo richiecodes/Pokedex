@@ -1,0 +1,20 @@
+.search-wrapper {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.search-wrapper > form > input {
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.search-wrapper > form > label {
+  font-size: 20px;
+}
+
+input:focus::-webkit-input-placeholder 
+{
+    color: transparent;
+}

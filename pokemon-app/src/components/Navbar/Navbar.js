@@ -7,11 +7,11 @@ const Navbar = () => {
     <nav className='container'>
       <Link to='/' className='nav-header'>
         <img src={pokeball} alt='logo' />
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
       </Link>
       <ul className='nav-links'>
         <Link to='/random' className='nav-link'>
-          <li>Random Pokemon</li>
+          <li>Random Pokémon</li>
         </Link>
         <Link to='/search' className='nav-link'>
           <li>Search</li>

@@ -18,6 +18,8 @@ const Home = () => {
     fetchData();
   }, [])
   
+  
+
   return (
     <div className='all-pokemon-container'>
       { allPokemon.map((p) => (

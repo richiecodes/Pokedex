@@ -37,10 +37,11 @@ function Search() {
     return <SearchForm />
   } else if (pokemon.num >= 1) {
     return (
-      <>
+      <div className='search-card-wrapper'>
         <SearchForm />
-        <Fullcard pokemon={pokemon} />
-      </>
+          <Fullcard className = 'search-card' pokemon={pokemon} />
+        
+      </div>
     )
   } else {
     return (

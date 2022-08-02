@@ -21,8 +21,8 @@ const Random = () => {
 
   return (
     <div className='random-card-container'>
-      <Fullcard pokemon={pokemon} />
       <FiRefreshCcw className='refresh-icon' onClick={() => {window.location.reload()}} />
+      <Fullcard pokemon={pokemon} />
     </div>
   )
 }

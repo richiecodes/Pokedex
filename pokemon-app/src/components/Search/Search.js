@@ -32,7 +32,7 @@ function Search() {
     </div>
     )
   }
-
+ 
   if (!pokemon) {
     return <SearchForm />
   } else if (pokemon.num >= 1) {

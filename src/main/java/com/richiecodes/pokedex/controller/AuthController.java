@@ -1,5 +1,16 @@
 package com.richiecodes.pokedex.controller;
 
+import com.richiecodes.pokedex.model.ERole;
+import com.richiecodes.pokedex.model.Role;
+import com.richiecodes.pokedex.model.User;
+import com.richiecodes.pokedex.payload.request.LoginRequest;
+import com.richiecodes.pokedex.payload.request.SignupRequest;
+import com.richiecodes.pokedex.payload.response.JwtResponse;
+import com.richiecodes.pokedex.payload.response.MessageResponse;
+import com.richiecodes.pokedex.repositories.RoleRepository;
+import com.richiecodes.pokedex.repositories.UserRepository;
+import com.richiecodes.pokedex.security.jwt.JwtUtils;
+import com.richiecodes.pokedex.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -7,16 +18,17 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@RequestMapping("/pokemon/auth")
+@CrossOrigin(origins = "*", maxAge = 3600)
+@RestController
+@RequestMapping("/api/auth")
 public class AuthController {
 
     @Autowired

@@ -12,6 +12,7 @@ import com.richiecodes.pokedex.repositories.UserRepository;
 import com.richiecodes.pokedex.security.jwt.JwtUtils;
 import com.richiecodes.pokedex.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -75,7 +76,7 @@ public class AuthController {
         //If not, create a new account for user
         User user = new User(signupRequest.getUsername(), signupRequest.getEmail(), encoder.encode(signupRequest.getPassword()));
 
-        Set<String> strRoles = signupRequest.getRole();
+        Set<String> strRoles = signupRequest.getRoles();
         Set<Role> roles = new HashSet<>();
 
         if (strRoles == null) {
@@ -108,6 +109,6 @@ public class AuthController {
         user.setRoles(roles);
         userRepository.save(user);
 
-        return ResponseEntity.ok(new MessageResponse("User Registered Successfully!"));
+        return new ResponseEntity(new MessageResponse("User Registered Successfully!"), HttpStatus.CREATED);
     }
 }
